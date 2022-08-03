@@ -1,0 +1,34 @@
+ITRI : 
+麻煩須改一下map的路徑，src/ITRI_localization 這個檔案第106行的路徑，是使用絕對路徑
+須改成 ".../your_work_space/src/sdc_localization/ITRI_data/map.pcd"
+(ITRI map在  .../your_work_space/src/sdc_localization/ITRI_data/map.pcd)
+
+並執行：
+rosrun sdc_localization ITRI_localization
+
+
+
+Nuscenes:
+1.
+麻煩須改一下map的路徑，src/nuscenes_localization 這個檔案第336行的路徑，是使用絕對路徑
+須改成 ".../your_work_space/src/sdc_localization/map"
+(nuscenes map在  .../your_work_space/src/sdc_localization/map)
+
+2.
+要改一下BBOX路徑(車子BBOX)，src/nuscenes_localization 這個檔案第210行的路徑，是使用絕對路徑
+將"/data/david/david_ws/src/sdc_localization/bbox/p3/" 改成如下
+
+跑Private_1 ：
+".../your_work_space/src/sdc_localization/bbox/p1/"
+
+跑Private_2：
+".../your_work_space/src/sdc_localization/bbox/p2/"
+
+跑Private_3：
+".../your_work_space/src/sdc_localization/bbox/p3/"
+不同bag有不同bbox
+
+
+並執行：
+rosrun sdc_localization nuscenes_localization
+
